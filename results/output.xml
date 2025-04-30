@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-30T15:27:30.248926" rpa="false" schemaversion="5">
+<suite id="s1" name="Saucedemo Test" source="C:\Users\phrpa\Learn\SauceDemo-UI-Automation\testcases\saucedemo_test.robot">
+<kw name="Open Browser To Login Page" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:32.460547" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-30T15:27:32.460355" elapsed="1.450027"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-30T15:27:33.910674" elapsed="0.025974"/>
+</kw>
+<kw name="Start Video Recording" owner="ScreenCapLibrary">
+<msg time="2025-04-30T15:27:36.044274" level="INFO">Automatically setting a fps of 15.5</msg>
+<doc>Starts the recording of a video in the background with the specified ``name``.
+The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
+<status status="PASS" start="2025-04-30T15:27:33.936972" elapsed="2.108476"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:32.459818" elapsed="3.585736"/>
+</kw>
+<test id="s1-t1" name="Login With Incorrect Username" line="14">
+<kw name="Login with stand_user and ${password}" owner="login_page" source_name="Login with ${username} and ${password}">
+<kw name="Wait Until Element Is Ready Then Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:36.047125" level="INFO">Typing text 'stand_user' into text field 'id:user-name'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.046838" elapsed="0.085521"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.046659" elapsed="0.085895"/>
+</kw>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2025-04-30T15:27:36.046442" elapsed="0.086239"/>
+</kw>
+<kw name="Wait Until Element Is Ready Then Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:36.133982" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.133688" elapsed="0.064547"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.133426" elapsed="0.064926"/>
+</kw>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-04-30T15:27:36.132978" elapsed="0.065465"/>
+</kw>
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:36.199392" level="INFO">Clicking element 'id:login-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.199194" elapsed="0.053920"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.198989" elapsed="0.054282"/>
+</kw>
+<arg>id:login-button</arg>
+<status status="PASS" start="2025-04-30T15:27:36.198652" elapsed="0.054759"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:36.046149" elapsed="0.207379"/>
+</kw>
+<kw name="Login Should Fail" owner="login_page">
+<kw name="Wait Until Page Contains Element Then Verify Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:36.265416" level="INFO">Current page contains element 'css:[data-test="error"]'.</msg>
+<arg>${expected_locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.254924" elapsed="0.010586"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${expected_locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.254677" elapsed="0.010906"/>
+</kw>
+<arg>css:[data-test="error"]</arg>
+<status status="PASS" start="2025-04-30T15:27:36.254324" elapsed="0.011323"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:36.253955" elapsed="0.011739"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:36.045658" elapsed="0.220267"/>
+</test>
+<test id="s1-t2" name="Login With Correct Credentials" line="18">
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.266809" elapsed="0.054297"/>
+</kw>
+<kw name="Login with ${username} and ${password}" owner="login_page" source_name="Login with ${username} and ${password}">
+<kw name="Wait Until Element Is Ready Then Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:36.323120" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.322888" elapsed="0.069189"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.322651" elapsed="0.069528"/>
+</kw>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2025-04-30T15:27:36.322254" elapsed="0.069992"/>
+</kw>
+<kw name="Wait Until Element Is Ready Then Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:36.393029" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.392862" elapsed="0.062646"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.392705" elapsed="0.062932"/>
+</kw>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-04-30T15:27:36.392411" elapsed="0.063300"/>
+</kw>
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:36.456502" level="INFO">Clicking element 'id:login-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.456316" elapsed="0.091673"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.456132" elapsed="0.091998"/>
+</kw>
+<arg>id:login-button</arg>
+<status status="PASS" start="2025-04-30T15:27:36.455877" elapsed="0.094449"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:36.321737" elapsed="0.228751"/>
+</kw>
+<kw name="Login Should Succeed" owner="login_page">
+<kw name="Wait Until Page Contains Element Then Verify Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:36.563562" level="INFO">Current page contains element 'class:inventory_container'.</msg>
+<arg>${expected_locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.552111" elapsed="0.011611"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${expected_locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.551822" elapsed="0.012015"/>
+</kw>
+<arg>class:inventory_container</arg>
+<status status="PASS" start="2025-04-30T15:27:36.551423" elapsed="0.012515"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:36.550980" elapsed="0.013026"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:36.266370" elapsed="0.297959"/>
+</test>
+<test id="s1-t3" name="Logout Function" line="23">
+<kw name="Open Side Menu" owner="inventory_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:36.566542" level="INFO">Clicking element 'class:bm-burger-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.566273" elapsed="0.053930"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.565988" elapsed="0.054354"/>
+</kw>
+<arg>class:bm-burger-button</arg>
+<status status="PASS" start="2025-04-30T15:27:36.565667" elapsed="0.054771"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:36.565326" elapsed="0.055201"/>
+</kw>
+<kw name="Logout" owner="inventory_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:36.622208" level="INFO">Clicking element 'id:logout_sidebar_link'.</msg>
+<msg time="2025-04-30T15:27:36.762608" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-30T15:27:36.762791" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60842EFA5+77893]
+	GetHandleVerifier [0x00007FF60842F000+77984]
+	(No symbol) [0x00007FF6081F8FEC]
+	(No symbol) [0x00007FF608250624]
+	(No symbol) [0x00007FF608242134]
+	(No symbol) [0x00007FF60827712A]
+	(No symbol) [0x00007FF6082419E6]
+	(No symbol) [0x00007FF608277340]
+	(No symbol) [0x00007FF60829F07F]
+	(No symbol) [0x00007FF608276F03]
+	(No symbol) [0x00007FF608240328]
+	(No symbol) [0x00007FF608241093]
+	GetHandleVerifier [0x00007FF6086E7B6D+2931725]
+	GetHandleVerifier [0x00007FF6086E2132+2908626]
+	GetHandleVerifier [0x00007FF6087000F3+3031443]
+	GetHandleVerifier [0x00007FF6084491EA+184970]
+	GetHandleVerifier [0x00007FF60845086F+215311]
+	GetHandleVerifier [0x00007FF608436EC4+110436]
+	GetHandleVerifier [0x00007FF608437072+110866]
+	GetHandleVerifier [0x00007FF60841D479+5401]
+	BaseThreadInitThunk [0x00007FFF631BE8D7+23]
+	RtlUserThreadStart [0x00007FFF647B14FC+44]
+</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-04-30T15:27:36.621975" elapsed="0.217926">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60842EFA5+77893]
+	GetHandleVerifier [0x00007FF60842F000+77984]
+	(No symbol) [0x00007FF6081F8FEC]
+	(No symbol) [0x00007FF608250624]
+	(No symbol) [0x00007FF608242134]
+	(No symbol) [0x00007FF60827712A]
+	(No symbol) [0x00007FF6082419E6]
+	(No symbol) [0x00007FF608277340]
+	(No symbol) [0x00007FF60829F07F]
+	(No symbol) [0x00007FF608276F03]
+	(No symbol) [0x00007FF608240328]
+	(No symbol) [0x00007FF608241093]
+	GetHandleVerifier [0x00007FF6086E7B6D+2931725]
+	GetHandleVerifier [0x00007FF6086E2132+2908626]
+	GetHandleVerifier [0x00007FF6087000F3+3031443]
+	GetHandleVerifier [0x00007FF6084491EA+184970]
+	GetHandleVerifier [0x00007FF60845086F+215311]
+	GetHandleVerifier [0x00007FF608436EC4+110436]
+	GetHandleVerifier [0x00007FF608437072+110866]
+	GetHandleVerifier [0x00007FF60841D479+5401]
+	BaseThreadInitThunk [0x00007FFF631BE8D7+23]
+	RtlUserThreadStart [0x00007FFF647B14FC+44]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:38.841099" level="INFO">Clicking element 'id:logout_sidebar_link'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:38.840791" elapsed="0.043931"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:36.621705" elapsed="2.263137"/>
+</kw>
+<arg>id:logout_sidebar_link</arg>
+<status status="PASS" start="2025-04-30T15:27:36.621386" elapsed="2.263557"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:36.621002" elapsed="2.264011"/>
+</kw>
+<kw name="Wait Until Page Contains Element Then Verify Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:38.891878" level="INFO">Current page contains element 'id:login-button'.</msg>
+<arg>${expected_locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-30T15:27:38.885938" elapsed="0.006084"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${expected_locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:38.885711" elapsed="0.006421"/>
+</kw>
+<arg>id:login-button</arg>
+<status status="PASS" start="2025-04-30T15:27:38.885361" elapsed="0.006888"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:36.564870" elapsed="2.327707"/>
+</test>
+<test id="s1-t4" name="Side Menu Functionality" line="28">
+<kw name="Login with ${username} and ${password}" owner="login_page" source_name="Login with ${username} and ${password}">
+<kw name="Wait Until Element Is Ready Then Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:38.894644" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:38.894434" elapsed="0.062497"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:38.894222" elapsed="0.062829"/>
+</kw>
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2025-04-30T15:27:38.893906" elapsed="0.063250"/>
+</kw>
+<kw name="Wait Until Element Is Ready Then Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:38.958347" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:38.957990" elapsed="0.053703"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:38.957769" elapsed="0.054050"/>
+</kw>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-04-30T15:27:38.957384" elapsed="0.054527"/>
+</kw>
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:39.012814" level="INFO">Clicking element 'id:login-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:39.012631" elapsed="0.041402"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:39.012429" elapsed="0.041746"/>
+</kw>
+<arg>id:login-button</arg>
+<status status="PASS" start="2025-04-30T15:27:39.012115" elapsed="0.042183"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:38.893523" elapsed="0.160992"/>
+</kw>
+<kw name="Open Side Menu" owner="inventory_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:39.055661" level="INFO">Clicking element 'class:bm-burger-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:39.055510" elapsed="0.038272"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:39.055326" elapsed="0.038564"/>
+</kw>
+<arg>class:bm-burger-button</arg>
+<status status="PASS" start="2025-04-30T15:27:39.055129" elapsed="0.038845"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:39.054869" elapsed="0.039168"/>
+</kw>
+<kw name="Verify Side Menu Is Visible" owner="inventory_page">
+<kw name="Wait Until Page Contains Element Then Verify Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:39.102610" level="INFO">Current page contains element 'class:bm-menu'.</msg>
+<arg>${expected_locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-30T15:27:39.095062" elapsed="0.007660"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${expected_locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:39.094893" elapsed="0.007925"/>
+</kw>
+<arg>class:bm-menu</arg>
+<status status="PASS" start="2025-04-30T15:27:39.094683" elapsed="0.008223"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:39.094365" elapsed="0.008620"/>
+</kw>
+<kw name="Close Side Menu" owner="inventory_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:39.104306" level="INFO">Clicking element 'class:bm-cross-button'.</msg>
+<msg time="2025-04-30T15:27:39.225128" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-30T15:27:39.225421" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60842EFA5+77893]
+	GetHandleVerifier [0x00007FF60842F000+77984]
+	(No symbol) [0x00007FF6081F8FEC]
+	(No symbol) [0x00007FF608250624]
+	(No symbol) [0x00007FF608242134]
+	(No symbol) [0x00007FF60827712A]
+	(No symbol) [0x00007FF6082419E6]
+	(No symbol) [0x00007FF608277340]
+	(No symbol) [0x00007FF60829F07F]
+	(No symbol) [0x00007FF608276F03]
+	(No symbol) [0x00007FF608240328]
+	(No symbol) [0x00007FF608241093]
+	GetHandleVerifier [0x00007FF6086E7B6D+2931725]
+	GetHandleVerifier [0x00007FF6086E2132+2908626]
+	GetHandleVerifier [0x00007FF6087000F3+3031443]
+	GetHandleVerifier [0x00007FF6084491EA+184970]
+	GetHandleVerifier [0x00007FF60845086F+215311]
+	GetHandleVerifier [0x00007FF608436EC4+110436]
+	GetHandleVerifier [0x00007FF608437072+110866]
+	GetHandleVerifier [0x00007FF60841D479+5401]
+	BaseThreadInitThunk [0x00007FFF631BE8D7+23]
+	RtlUserThreadStart [0x00007FFF647B14FC+44]
+</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-04-30T15:27:39.104074" elapsed="0.122633">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60842EFA5+77893]
+	GetHandleVerifier [0x00007FF60842F000+77984]
+	(No symbol) [0x00007FF6081F8FEC]
+	(No symbol) [0x00007FF608250624]
+	(No symbol) [0x00007FF608242134]
+	(No symbol) [0x00007FF60827712A]
+	(No symbol) [0x00007FF6082419E6]
+	(No symbol) [0x00007FF608277340]
+	(No symbol) [0x00007FF60829F07F]
+	(No symbol) [0x00007FF608276F03]
+	(No symbol) [0x00007FF608240328]
+	(No symbol) [0x00007FF608241093]
+	GetHandleVerifier [0x00007FF6086E7B6D+2931725]
+	GetHandleVerifier [0x00007FF6086E2132+2908626]
+	GetHandleVerifier [0x00007FF6087000F3+3031443]
+	GetHandleVerifier [0x00007FF6084491EA+184970]
+	GetHandleVerifier [0x00007FF60845086F+215311]
+	GetHandleVerifier [0x00007FF608436EC4+110436]
+	GetHandleVerifier [0x00007FF608437072+110866]
+	GetHandleVerifier [0x00007FF60841D479+5401]
+	BaseThreadInitThunk [0x00007FFF631BE8D7+23]
+	RtlUserThreadStart [0x00007FFF647B14FC+44]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.228092" level="INFO">Clicking element 'class:bm-cross-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.227632" elapsed="0.039740"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:39.103840" elapsed="2.163674"/>
+</kw>
+<arg>class:bm-cross-button</arg>
+<status status="PASS" start="2025-04-30T15:27:39.103555" elapsed="2.164056"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:39.103273" elapsed="2.164405"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:38.893033" elapsed="2.374894"/>
+</test>
+<test id="s1-t5" name="Add And Remove Product" line="34">
+<kw name="Add First Product To Cart" owner="inventory_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.269540" level="INFO">Clicking element 'xpath:(//button[contains(text(),'Add to cart')])[1]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.269392" elapsed="0.051610"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.269224" elapsed="0.051898"/>
+</kw>
+<arg>xpath:(//button[contains(text(),'Add to cart')])[1]</arg>
+<status status="PASS" start="2025-04-30T15:27:41.269035" elapsed="0.052177"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:41.268825" elapsed="0.052546"/>
+</kw>
+<kw name="Go To Cart" owner="inventory_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.322711" level="INFO">Clicking element 'class:shopping_cart_link'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.322482" elapsed="0.051916"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.322251" elapsed="0.052293"/>
+</kw>
+<arg>class:shopping_cart_link</arg>
+<status status="PASS" start="2025-04-30T15:27:41.322035" elapsed="0.052618"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:41.321736" elapsed="0.052992"/>
+</kw>
+<kw name="Remove Product From Cart" owner="cart_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.375959" level="INFO">Clicking element 'css:.item_pricebar &gt; .btn_secondary'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.375805" elapsed="0.044618"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.375644" elapsed="0.044891"/>
+</kw>
+<arg>css:.item_pricebar &gt; .btn_secondary</arg>
+<status status="PASS" start="2025-04-30T15:27:41.375446" elapsed="0.045183"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:41.375162" elapsed="0.045531"/>
+</kw>
+<kw name="Verify Product Removed" owner="cart_page">
+<kw name="Wait Until Page Is Ready Then Element Should Not Be Visible" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.426355" level="INFO">Element 'css:.item_pricebar &gt; .btn_secondary' did not exist.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.421796" elapsed="0.004644"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Element Should Not Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.421600" elapsed="0.004919"/>
+</kw>
+<arg>css:.item_pricebar &gt; .btn_secondary</arg>
+<status status="PASS" start="2025-04-30T15:27:41.421360" elapsed="0.005237"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:41.421047" elapsed="0.005608"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:41.268461" elapsed="0.158393"/>
+</test>
+<test id="s1-t6" name="Checkout Flow" line="40">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.428377" level="INFO">Clicking element 'xpath://button[contains(text(),'Continue Shopping')]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.428185" elapsed="0.062602"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.427987" elapsed="0.062891"/>
+</kw>
+<arg>xpath://button[contains(text(),'Continue Shopping')]</arg>
+<status status="PASS" start="2025-04-30T15:27:41.427700" elapsed="0.063243"/>
+</kw>
+<kw name="Add First Product To Cart" owner="inventory_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.492122" level="INFO">Clicking element 'xpath:(//button[contains(text(),'Add to cart')])[1]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.491957" elapsed="0.043157"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.491782" elapsed="0.043449"/>
+</kw>
+<arg>xpath:(//button[contains(text(),'Add to cart')])[1]</arg>
+<status status="PASS" start="2025-04-30T15:27:41.491568" elapsed="0.043729"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:41.491272" elapsed="0.044075"/>
+</kw>
+<kw name="Go To Cart" owner="inventory_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.536645" level="INFO">Clicking element 'class:shopping_cart_link'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.536490" elapsed="0.044848"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.536321" elapsed="0.045114"/>
+</kw>
+<arg>class:shopping_cart_link</arg>
+<status status="PASS" start="2025-04-30T15:27:41.536091" elapsed="0.045413"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:41.535736" elapsed="0.045820"/>
+</kw>
+<kw name="Click Checkout" owner="cart_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.582749" level="INFO">Clicking element 'css:.btn_action'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.582551" elapsed="0.047845"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.582344" elapsed="0.048265"/>
+</kw>
+<arg>css:.btn_action</arg>
+<status status="PASS" start="2025-04-30T15:27:41.582145" elapsed="0.048562"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:41.581876" elapsed="0.048888"/>
+</kw>
+<kw name="Fill Checkout Form" owner="checkout_page">
+<kw name="Wait Until Element Is Ready Then Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.632135" level="INFO">Typing text 'Gabriel' into text field 'css:[data-test="firstName"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.631915" elapsed="0.062798"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.631745" elapsed="0.063063"/>
+</kw>
+<arg>css:[data-test="firstName"]</arg>
+<arg>${first}</arg>
+<status status="PASS" start="2025-04-30T15:27:41.631514" elapsed="0.063369"/>
+</kw>
+<kw name="Wait Until Element Is Ready Then Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.695805" level="INFO">Typing text 'Florescu' into text field 'css:[data-test="lastName"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.695511" elapsed="0.061035"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.695345" elapsed="0.061332"/>
+</kw>
+<arg>css:[data-test="lastName"]</arg>
+<arg>${last}</arg>
+<status status="PASS" start="2025-04-30T15:27:41.695052" elapsed="0.061721"/>
+</kw>
+<kw name="Wait Until Element Is Ready Then Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.757854" level="INFO">Typing text '123456' into text field 'css:[data-test="postalCode"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.757631" elapsed="0.063406"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.757406" elapsed="0.063735"/>
+</kw>
+<arg>css:[data-test="postalCode"]</arg>
+<arg>${postal}</arg>
+<status status="PASS" start="2025-04-30T15:27:41.757015" elapsed="0.064204"/>
+</kw>
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.822037" level="INFO">Clicking element 'css:.btn_primary'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.821865" elapsed="0.056350"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.821701" elapsed="0.056697"/>
+</kw>
+<arg>css:.btn_primary</arg>
+<status status="PASS" start="2025-04-30T15:27:41.821409" elapsed="0.057119"/>
+</kw>
+<arg>Gabriel</arg>
+<arg>Florescu</arg>
+<arg>123456</arg>
+<status status="PASS" start="2025-04-30T15:27:41.631176" elapsed="0.247421"/>
+</kw>
+<kw name="Finish Checkout" owner="checkout_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.879770" level="INFO">Clicking element 'css:.btn_action'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.879605" elapsed="0.048644"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.879440" elapsed="0.048938"/>
+</kw>
+<arg>css:.btn_action</arg>
+<status status="PASS" start="2025-04-30T15:27:41.879243" elapsed="0.049219"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:41.878958" elapsed="0.049561"/>
+</kw>
+<kw name="Verify Order Completed" owner="checkout_page">
+<kw name="Wait Until Page Contains Element Then Verify Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.938702" level="INFO">Current page contains element 'id:checkout_complete_container'.</msg>
+<arg>${expected_locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.929443" elapsed="0.009355"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${expected_locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.929285" elapsed="0.009586"/>
+</kw>
+<arg>id:checkout_complete_container</arg>
+<status status="PASS" start="2025-04-30T15:27:41.929089" elapsed="0.009842"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:41.928818" elapsed="0.010160"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:41.427277" elapsed="0.511908"/>
+</test>
+<test id="s1-t7" name="Product Detail Page Navigation" line="49">
+<kw name="Open Side Menu" owner="inventory_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.941363" level="INFO">Clicking element 'class:bm-burger-button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.941163" elapsed="0.036682"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.940871" elapsed="0.037094"/>
+</kw>
+<arg>class:bm-burger-button</arg>
+<status status="PASS" start="2025-04-30T15:27:41.940531" elapsed="0.037503"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:41.940123" elapsed="0.037961"/>
+</kw>
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:41.979150" level="INFO">Clicking element 'id:inventory_sidebar_link'.</msg>
+<msg time="2025-04-30T15:27:42.079717" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-30T15:27:42.079931" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60842EFA5+77893]
+	GetHandleVerifier [0x00007FF60842F000+77984]
+	(No symbol) [0x00007FF6081F8FEC]
+	(No symbol) [0x00007FF608250624]
+	(No symbol) [0x00007FF608242134]
+	(No symbol) [0x00007FF60827712A]
+	(No symbol) [0x00007FF6082419E6]
+	(No symbol) [0x00007FF608277340]
+	(No symbol) [0x00007FF60829F07F]
+	(No symbol) [0x00007FF608276F03]
+	(No symbol) [0x00007FF608240328]
+	(No symbol) [0x00007FF608241093]
+	GetHandleVerifier [0x00007FF6086E7B6D+2931725]
+	GetHandleVerifier [0x00007FF6086E2132+2908626]
+	GetHandleVerifier [0x00007FF6087000F3+3031443]
+	GetHandleVerifier [0x00007FF6084491EA+184970]
+	GetHandleVerifier [0x00007FF60845086F+215311]
+	GetHandleVerifier [0x00007FF608436EC4+110436]
+	GetHandleVerifier [0x00007FF608437072+110866]
+	GetHandleVerifier [0x00007FF60841D479+5401]
+	BaseThreadInitThunk [0x00007FFF631BE8D7+23]
+	RtlUserThreadStart [0x00007FFF647B14FC+44]
+</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-04-30T15:27:41.978957" elapsed="0.101887">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x00007FF60842EFA5+77893]
+	GetHandleVerifier [0x00007FF60842F000+77984]
+	(No symbol) [0x00007FF6081F8FEC]
+	(No symbol) [0x00007FF608250624]
+	(No symbol) [0x00007FF608242134]
+	(No symbol) [0x00007FF60827712A]
+	(No symbol) [0x00007FF6082419E6]
+	(No symbol) [0x00007FF608277340]
+	(No symbol) [0x00007FF60829F07F]
+	(No symbol) [0x00007FF608276F03]
+	(No symbol) [0x00007FF608240328]
+	(No symbol) [0x00007FF608241093]
+	GetHandleVerifier [0x00007FF6086E7B6D+2931725]
+	GetHandleVerifier [0x00007FF6086E2132+2908626]
+	GetHandleVerifier [0x00007FF6087000F3+3031443]
+	GetHandleVerifier [0x00007FF6084491EA+184970]
+	GetHandleVerifier [0x00007FF60845086F+215311]
+	GetHandleVerifier [0x00007FF608436EC4+110436]
+	GetHandleVerifier [0x00007FF608437072+110866]
+	GetHandleVerifier [0x00007FF60841D479+5401]
+	BaseThreadInitThunk [0x00007FFF631BE8D7+23]
+	RtlUserThreadStart [0x00007FFF647B14FC+44]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:44.081843" level="INFO">Clicking element 'id:inventory_sidebar_link'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.081429" elapsed="0.051234"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:41.978740" elapsed="2.154020"/>
+</kw>
+<arg>id:inventory_sidebar_link</arg>
+<status status="PASS" start="2025-04-30T15:27:41.978407" elapsed="2.154436"/>
+</kw>
+<kw name="Go To Product Detail Page" owner="inventory_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:44.134183" level="INFO">Clicking element 'id:item_4_title_link'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.134008" elapsed="0.068765"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.133816" elapsed="0.069059"/>
+</kw>
+<arg>id:item_4_title_link</arg>
+<status status="PASS" start="2025-04-30T15:27:44.133558" elapsed="0.069386"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:44.133197" elapsed="0.069797"/>
+</kw>
+<kw name="Verify Product Detail Page Shown" owner="inventory_page">
+<kw name="Wait Until Page Contains Element Then Verify Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:44.225573" level="INFO">Current page contains element 'class:inventory_details_desc_container'.</msg>
+<arg>${expected_locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.204379" elapsed="0.021315"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${expected_locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.204127" elapsed="0.021670"/>
+</kw>
+<arg>class:inventory_details_desc_container</arg>
+<status status="PASS" start="2025-04-30T15:27:44.203735" elapsed="0.022158"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:44.203374" elapsed="0.022584"/>
+</kw>
+<kw name="Go Back To Products From Detail" owner="inventory_page">
+<kw name="Wait Until Element Is Ready Then Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:44.228053" level="INFO">Clicking element 'class:inventory_details_back_button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.227772" elapsed="0.060868"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.227479" elapsed="0.061298"/>
+</kw>
+<arg>class:inventory_details_back_button</arg>
+<status status="PASS" start="2025-04-30T15:27:44.226937" elapsed="0.061954"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:44.226375" elapsed="0.062604"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:41.939607" elapsed="2.349703"/>
+</test>
+<test id="s1-t8" name="Verify Product Sorting" line="56">
+<kw name="Sort Products Z To A" owner="inventory_page">
+<kw name="Wait Until Element Is Ready Then Select Option By Value" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:44.291280" level="INFO">Selecting options from selection list 'class:product_sort_container' by value za.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.291052" elapsed="0.062497"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Select From List By Value</arg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.290827" elapsed="0.062897"/>
+</kw>
+<arg>class:product_sort_container</arg>
+<arg>za</arg>
+<status status="PASS" start="2025-04-30T15:27:44.290529" elapsed="0.063315"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:44.290230" elapsed="0.063690"/>
+</kw>
+<kw name="Verify First Product Is Red Shirt" owner="inventory_page">
+<kw name="Wait Until Page Contains Element Then Verify Element Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:44.363224" level="INFO">Current page contains element 'id:item_3_title_link'.</msg>
+<arg>${expected_locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.355087" elapsed="0.008236"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain Element</arg>
+<arg>${expected_locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.354914" elapsed="0.008491"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-30T15:27:44.363878" level="INFO">Verifying element 'id:item_3_title_link' contains exact text 'Test.allTheThings() T-Shirt (Red)'.</msg>
+<arg>${expected_locator}</arg>
+<arg>${expected_text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.363562" elapsed="0.019646"/>
+</kw>
+<arg>id:item_3_title_link</arg>
+<arg>Test.allTheThings() T-Shirt (Red)</arg>
+<status status="PASS" start="2025-04-30T15:27:44.354685" elapsed="0.028677"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:44.354325" elapsed="0.029121"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:44.289777" elapsed="0.093938"/>
+</test>
+<kw name="Close Browser" owner="common_keywords" type="TEARDOWN">
+<kw name="Stop Video Recording" owner="ScreenCapLibrary">
+<msg time="2025-04-30T15:27:44.422646" level="INFO" html="true">&lt;a href="recording_1.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_1.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
+``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
+alias all of them will be closed. If ``embed`` argument was set to
+``True`` the video will be displayed in the log file.
+Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
+the log file only.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.384656" elapsed="0.038157"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-04-30T15:27:44.423061" elapsed="2.202416"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:44.384461" elapsed="2.241258"/>
+</kw>
+<status status="PASS" start="2025-04-30T15:27:30.250164" elapsed="16.375665"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Saucedemo Test" id="s1" pass="8" fail="0" skip="0">Saucedemo Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
