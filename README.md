@@ -62,7 +62,7 @@ Run tests and store the output in the `results` folder:
 The test report will be generated in: `results\report.html`
 
 
-🧪 รายการที่ทดสอบ Core Flow
+<!-- 🧪 รายการที่ทดสอบ Core Flow
 1. 🔐 Authentication (การเข้าสู่ระบบ)
 - Login: username/password ถูกต้อง
 - Login: username/password ไม่ถูกต้อง
@@ -93,4 +93,4 @@ The test report will be generated in: `results\report.html`
 - Step 1: ใส่ข้อมูล Zip เป็นตัวอักษร → แสดง error
 - Step 1: ใส่ข้อมูล (ชื่อ, นามสกุล, Zip)
 - Step 2: ตรวจสอบข้อมูลสินค้า & กด Finish
-- Step 3: ข้อความสรุป & กลับหน้าแรก
+- Step 3: ข้อความสรุป & กลับหน้าแรก -->
