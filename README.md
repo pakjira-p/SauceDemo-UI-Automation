@@ -5,12 +5,12 @@ This project demonstrates **UI automation testing** of the [SauceDemo](https://w
 An automation testing project written with Robot Framework. It was developed in order to understand better how Robot Framework functions work and to developed an End-to-end user flow on the demo shopping [SauceDemo](https://www.saucedemo.com/) website, where I tested more functionalities and details.
 
 ## 📚 Documentation (Google Docs & Sheets)
-- 📄 [Test Plan (Google Docs)](https://docs.google.com/document/...)  
-- 🧪 [Test Cases (Google Sheets)](https://docs.google.com/spreadsheets/...)  
+- 📄 [Test Plan (Google Docs)](https://docs.google.com/document/d/1-lrxU39OmO9sJA6JqrUbi1nZc17gsmUTm-WPx2iO84A/edit?usp=sharing)  
+- 🧪 [Test Cases (Google Sheets)](https://docs.google.com/spreadsheets/d/1lHwW3PfNL1AI9RI9j7cxp2SzekNTmACaPHAcs8CnecI/edit?usp=sharing)  
 - 🐞 [Bug Report (PDF - Jira Export)](https://drive.google.com/file/d/...) 
 - ✅ [Test Summary Report (Google Docs)](https://docs.google.com/document/...)
 
-📁 View all documentation in this shared folder: [Google Drive Folder](https://drive.google.com/drive/folders/...)
+📁 View all documentation in this shared folder: [Google Drive Folder](https://drive.google.com/drive/folders/12xwMVhaA6jwB8pNXFYAVQR4Kj6c2Yn_j?usp=sharing)
 
 ## 🧪 Test Scope
 ### ✅ In Scope
@@ -35,11 +35,11 @@ An automation testing project written with Robot Framework. It was developed in 
 
 ### 🛠️ Prerequisites
 Ensure you have the following installed on your system:
-- Python (version 3.8+ recommended) 👉 Download: https://www.python.org/downloads/
+- Python (version 3.8+ recommended) 👉 [Download](https://www.python.org/downloads/)
 - pip (usually comes with Python)
 - Google Chrome (for browser testing)
 - ChromeDriver
-    - Make sure the version matches your installed Chrome browser 👉 Download: https://chromedriver.chromium.org/downloads
+    - Make sure the version matches your installed Chrome browser 👉 [Download](https://chromedriver.chromium.org/downloads)
 
 ### 📦 Install Dependencies
 Install Robot Framework and necessary libraries via pip:
@@ -62,7 +62,7 @@ Run tests and store the output in the `results` folder:
 The test report will be generated in: `results\report.html`
 
 
-<!-- 🧪 รายการที่ทดสอบ Core Flow
+<!-- NOTE รายการที่ทดสอบ Core Flow
 1. 🔐 Authentication (การเข้าสู่ระบบ)
 - Login: username/password ถูกต้อง
 - Login: username/password ไม่ถูกต้อง
