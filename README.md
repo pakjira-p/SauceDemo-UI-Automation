@@ -33,7 +33,9 @@ An automation testing project written with Robot Framework. It was developed in 
 ## 🎬 video of the Automation test
 video recording of the automation tests execution:
 
-https://github.com/user-attachments/assets/aa53b40a-abe2-4f11-8741-b8f679e95df8
+https://github.com/user-attachments/assets/011bc6f3-67f2-4224-95aa-6e0cd908301c
+
+
 
 ## ▶️ How to Run Tests
 
