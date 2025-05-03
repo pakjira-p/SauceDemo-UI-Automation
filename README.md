@@ -31,8 +31,9 @@ An automation testing project written with Robot Framework. It was developed in 
 - Testing with multiple user roles (only standard user tested)
 
 ## 🎬 video of the Automation test
-video recording of the automation tests execution
-https://github.com/user-attachments/assets/4008235a-cf48-4b6e-93b2-eebfa6aed69a
+video recording of the automation tests execution:
+
+https://github.com/user-attachments/assets/aa53b40a-abe2-4f11-8741-b8f679e95df8
 
 ## ▶️ How to Run Tests
 
