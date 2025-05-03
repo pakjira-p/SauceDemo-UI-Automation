@@ -2,13 +2,13 @@
 This project demonstrates **UI automation testing** of the [SauceDemo](https://www.saucedemo.com/) using the **Robot Framework**, in order to practice my automation testing skills with focus on functional testing using Page Object Model (POM) structure.
 
 ## 📌 Inspiration and personal purpose
-An automation testing project written with Robot Framework. It was developed in order to understand better how Robot Framework functions work and to developed an End-to-end user flow on the demo shopping [SauceDemo](https://www.saucedemo.com/) website, where I tested more functionalities and details.
+An automation testing project written with Robot Framework. It was developed in order to understand better how Robot Framework functions work on the demo shopping [SauceDemo](https://www.saucedemo.com/) website, where I tested more functionalities and details.
 
 ## 📚 Documentation (Google Docs & Sheets)
 - 📄 [Test Plan (Google Docs)](https://docs.google.com/document/d/1-lrxU39OmO9sJA6JqrUbi1nZc17gsmUTm-WPx2iO84A/edit?usp=sharing)  
 - 🧪 [Test Cases (Google Sheets)](https://docs.google.com/spreadsheets/d/1lHwW3PfNL1AI9RI9j7cxp2SzekNTmACaPHAcs8CnecI/edit?usp=sharing)  
-- 🐞 [Bug Report (PDF - Jira Export)](https://drive.google.com/file/d/1q12WxJQ_sewGhepSxken8R2atcZ5EcXv/view?usp=sharing) 
-- ✅ [Test Summary Report (Google Docs)](hhttps://docs.google.com/document/d/1pLT3RmXAhAUQpnUe3j_ad7KnZfDQVVMengIbv9skDAw/edit?usp=sharing)
+- 🐞 [Bug Report (PDF - Jira Export)](https://drive.google.com/file/d/1q12WxJQ_sewGhepSxken8R2atcZ5EcXv/view?usp=sharing)
+- ✅ [Test Summary Report (Google Docs)](https://docs.google.com/document/d/1pLT3RmXAhAUQpnUe3j_ad7KnZfDQVVMengIbv9skDAw/edit?usp=sharing)
 
 📁 View all documentation in this shared folder: [Google Drive Folder](https://drive.google.com/drive/folders/12xwMVhaA6jwB8pNXFYAVQR4Kj6c2Yn_j?usp=sharing)
 
@@ -32,7 +32,7 @@ An automation testing project written with Robot Framework. It was developed in 
 
 ## 🎬 video of the Automation test
 video recording of the automation tests execution
-
+https://github.com/user-attachments/assets/4008235a-cf48-4b6e-93b2-eebfa6aed69a
 
 ## ▶️ How to Run Tests
 
