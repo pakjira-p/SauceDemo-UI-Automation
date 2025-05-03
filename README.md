@@ -7,8 +7,8 @@ An automation testing project written with Robot Framework. It was developed in 
 ## 📚 Documentation (Google Docs & Sheets)
 - 📄 [Test Plan (Google Docs)](https://docs.google.com/document/d/1-lrxU39OmO9sJA6JqrUbi1nZc17gsmUTm-WPx2iO84A/edit?usp=sharing)  
 - 🧪 [Test Cases (Google Sheets)](https://docs.google.com/spreadsheets/d/1lHwW3PfNL1AI9RI9j7cxp2SzekNTmACaPHAcs8CnecI/edit?usp=sharing)  
-- 🐞 [Bug Report (PDF - Jira Export)](https://drive.google.com/file/d/...) 
-- ✅ [Test Summary Report (Google Docs)](https://docs.google.com/document/...)
+- 🐞 [Bug Report (PDF - Jira Export)](https://drive.google.com/file/d/1q12WxJQ_sewGhepSxken8R2atcZ5EcXv/view?usp=sharing) 
+- ✅ [Test Summary Report (Google Docs)](hhttps://docs.google.com/document/d/1pLT3RmXAhAUQpnUe3j_ad7KnZfDQVVMengIbv9skDAw/edit?usp=sharing)
 
 📁 View all documentation in this shared folder: [Google Drive Folder](https://drive.google.com/drive/folders/12xwMVhaA6jwB8pNXFYAVQR4Kj6c2Yn_j?usp=sharing)
 
@@ -29,6 +29,9 @@ An automation testing project written with Robot Framework. It was developed in 
 - Mobile responsiveness or device testing
 - Security testing (e.g., SQL injection, XSS)
 - Testing with multiple user roles (only standard user tested)
+
+## 🎬 video of the Automation test
+video recording of the automation tests execution
 
 
 ## ▶️ How to Run Tests
@@ -59,38 +62,4 @@ Run tests and store the output in the `results` folder:
 ``` bash 
  robot --outputdir ./results testcases/saucedemo_test.robot
 ```
-The test report will be generated in: `results\report.html`
-
-
-<!-- NOTE รายการที่ทดสอบ Core Flow
-1. 🔐 Authentication (การเข้าสู่ระบบ)
-- Login: username/password ถูกต้อง
-- Login: username/password ไม่ถูกต้อง
-- Login: ฟอร์มว่าง หรือใส่ไม่ครบ
-2. 🧭 Logout
-- เปิด/ปิดเมนูซ้าย
-- กด Logout จากเมนู
-3. 🛒 Inventory Page (หน้าสินค้า)
-- ตรวจสอบว่ารายการสินค้าถูกโหลด
-- เรียงสินค้าจากราคาต่ำ-สูง
-- เรียงสินค้าจากราคาสูง-ต่ำ
-- เรียงสินค้าจากชื่อ A-Z
-- เรียงสินค้าจากชื่อ Z-A
-- ไปยังหน้ารายละเอียดของสินค้า
-- กด Back จากรายละเอียดกลับมา
-4. ➕➖ Add to Cart / Remove
-- Add 1 สินค้าไปยังตะกร้า
-- Add หลายสินค้า
-- Remove สินค้าจาก Inventory page
-- ตรวจสอบ badge ของตะกร้าเปลี่ยนตามจำนวน
-5. 🧺 Cart Page (หน้าตะกร้า)
-- ตรวจสอบรายการในตะกร้า
-- Remove สินค้าจากตะกร้า
-- กด Continue Shopping
-- กด Checkout
-6. 💳 Checkout Page (การชำระเงิน)
-- Step 1: ฟอร์มไม่ครบ → แสดง error
-- Step 1: ใส่ข้อมูล Zip เป็นตัวอักษร → แสดง error
-- Step 1: ใส่ข้อมูล (ชื่อ, นามสกุล, Zip)
-- Step 2: ตรวจสอบข้อมูลสินค้า & กด Finish
-- Step 3: ข้อความสรุป & กลับหน้าแรก -->
+The test report will be generated in: `results\report.html` 
